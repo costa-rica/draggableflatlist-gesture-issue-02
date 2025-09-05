@@ -6,9 +6,9 @@ import {
 } from "react-native-gesture-handler";
 import { useState, useCallback } from "react";
 
-import DraggableFlatList, {
-  ScaleDecorator,
-} from "react-native-draggable-flatlist";
+// import DraggableFlatList, {
+//   ScaleDecorator,
+// } from "react-native-draggable-flatlist";
 
 const initialData = [
   { key: "1", label: "Item 1", backgroundColor: "#ef4444" },
@@ -25,27 +25,27 @@ export default function App() {
     alert("Tap detected 👆");
   });
 
-  // -- DraggableFlatList
-  const [data, setData] = useState(initialData);
+  // // -- DraggableFlatList
+  // const [data, setData] = useState(initialData);
 
-  const renderItem = useCallback(({ item, drag, isActive }) => {
-    return (
-      <ScaleDecorator>
-        <TouchableOpacity
-          onLongPress={drag} // 👈 hold to start dragging
-          disabled={isActive}
-          style={[
-            styles.rowItem,
-            { backgroundColor: isActive ? "#9ca3af" : item.backgroundColor },
-          ]}
-          activeOpacity={0.8}
-        >
-          <Text style={styles.text}>{item.label}</Text>
-          <Text style={styles.hint}>Long-press & drag ↕</Text>
-        </TouchableOpacity>
-      </ScaleDecorator>
-    );
-  }, []);
+  // const renderItem = useCallback(({ item, drag, isActive }) => {
+  //   return (
+  //     <ScaleDecorator>
+  //       <TouchableOpacity
+  //         onLongPress={drag} // 👈 hold to start dragging
+  //         disabled={isActive}
+  //         style={[
+  //           styles.rowItem,
+  //           { backgroundColor: isActive ? "#9ca3af" : item.backgroundColor },
+  //         ]}
+  //         activeOpacity={0.8}
+  //       >
+  //         <Text style={styles.text}>{item.label}</Text>
+  //         <Text style={styles.hint}>Long-press & drag ↕</Text>
+  //       </TouchableOpacity>
+  //     </ScaleDecorator>
+  //   );
+  // }, []);
 
   return (
     <GestureHandlerRootView style={styles.container}>
@@ -56,7 +56,7 @@ export default function App() {
       </View>
       <View style={styles.vwDragabbleFlatList}>
         <Text style={styles.title}>DraggableFlatList demo</Text>
-        <DraggableFlatList
+        {/* <DraggableFlatList
           data={data}
           keyExtractor={(item) => item.key}
           renderItem={renderItem}
@@ -67,7 +67,7 @@ export default function App() {
           autoscrollThreshold={50}
           containerStyle={styles.listContainer}
           contentContainerStyle={styles.listContent}
-        />
+        /> */}
       </View>
     </GestureHandlerRootView>
   );

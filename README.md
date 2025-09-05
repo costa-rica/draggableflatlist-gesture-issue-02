@@ -26,3 +26,13 @@ This is simple version where both functionalities are on the same screen. I have
 
 - Expected: tapping gesture should display an alert on the device screen.
 - Actual: tapping gesture causes the app to crash - no errors are displayed, only crash log.
+
+## Demos
+
+### Draggable FlatList
+
+![Draggable FlatList](https://costa-rica.github.io/Videos/20250904draggableFL.gif)
+
+### Gesture Handler
+
+![Gesture Handler](https://costa-rica.github.io/Videos/2050904gesture.gif)
