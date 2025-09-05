@@ -35,4 +35,6 @@ This is simple version where both functionalities are on the same screen. I have
 
 ### Gesture Handler
 
+👉 this only works prior to implmenting the draggable flatlist.
+
 ![Gesture Handler](https://costa-rica.github.io/Videos/2050904gesture.gif)
